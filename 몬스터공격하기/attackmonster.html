@@ -18,8 +18,12 @@
             let attackcount=0
             for(monHP-damage; monHP>0;monHP-=damage){
                 document.write(`몬스터에게 ${attackcount+=1}회 공격했다. <br />`)
-                document.write(`몬스터의 남은 HP : ${monHP-damage} <br /><br />`)
                 
+                if(monHP-damage<0){
+                    monHP=0
+                    document.write(`몬스터의 남은 HP : 0 <br />`)
+                }else{document.write(`몬스터의 남은 HP : ${monHP-damage} <br /><br />`)
+                       }       
             }
             document.write("몬스터가 처치되었습니다.")
         }
