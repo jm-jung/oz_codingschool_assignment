@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attackmonster</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        let monHP=100
+        const container=document.getElementById("container")
+        const h1=document.createElement("h1")
+        h1.textContent="몬스터 잡기 게임을 시작합니다."
+        container.appendChild(h1)
+        let damage = parseInt(prompt("1회 공격시 데미지는 얼마인가요?(양의정수)"))
+        if(damage>0){
+            let attackcount=0
+            for(monHP-damage; monHP>0;monHP-=damage){
+                document.write(`몬스터에게 ${attackcount+=1}회 공격했다. <br />`)
+                document.write(`몬스터의 남은 HP : ${monHP-damage} <br /><br />`)
+                
+            }
+            document.write("몬스터가 처치되었습니다.")
+        }
+        else{
+            alert("데미지를 잘못 입력하여 게임을 취소합니다.")
+            h1.textContent="다시 시작하려면 새로고침 버튼을 누르세요."
+        }
+    </script>
+</body>
+</html>
