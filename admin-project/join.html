@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 양식</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .form-container table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .form-container table th {
+            text-align: right;
+            padding-right: 10px;
+        }
+        .form-container table td {
+            text-align: left;
+            padding-left: 10px;
+        }
+        .form-container .buttons {
+            text-align: center;
+        }
+        .form-container .btn {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="form" action="#">
+                <h1>회원가입 정보</h1>
+                <table>
+                    <tr>
+                        <th>아이디</th>
+                        <td>
+                            <input name="id" placeholder="아이디" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호</th>
+                        <td>
+                            <input type="password" name="pw1" placeholder="비밀번호">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호 확인</th>
+                        <td>
+                            <input type="password" name="pw2" placeholder="비밀번호">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>이름</th>
+                        <td>
+                            <input name="name" placeholder="이름" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>전화번호</th>
+                        <td>
+                            <input name="phone" placeholder="전화번호">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>성별</th>
+                        <td>
+                            <label>
+                                <input type="radio" name="gender" value="male" checked>남자
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="female">여자
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td>
+                            <input title="정확한 메일 주소를 작성해주세요" type="email" name="email" autocomplete="off">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>자기소개</th>
+                        <td>
+                            <textarea name="intro"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <div class="buttons">
+                    <input type="submit" value="가입" class="btn" title="가입">
+                    <input type="reset" value="리셋" class="btn" title="처음으로">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="join.js"></script>
+    
+</body>
+</html>
