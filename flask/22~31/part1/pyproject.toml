@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "part1"
+version = "0.1.0"
+description = ""
+authors = ["jm-jung <jmsk7554@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.3"
+flask-smorest = "^0.44.0"
+flask-sqlalchemy = "^3.1.1"
+pymysql = "^1.1.1"
+cryptography = "^43.0.0"
+getitem = "^1.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
